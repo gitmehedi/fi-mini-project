@@ -45,7 +45,7 @@ root@fi:~# cd /root
 root@fi:~# ssh -i host1.pri ubuntu@172.24.4.209  
 
 <br>
-<b> <H1> Bridge Details:
+<b> <H1> Bridge Details: </H1>
 
 
 ![Bridge Setup](img/fi-bridge-setup.png)
@@ -74,7 +74,7 @@ ip link set dev br0 up
 
 2. from VNF(sf1) we can ping either HOST1 or HOST2
 
-3. Need to work on bridge setup part as it's not allowing bidrectional connection
+3. Need to work on bridge setup part as it's not allowing bidirectional connection
 
 
 

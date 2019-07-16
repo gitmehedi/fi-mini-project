@@ -9,11 +9,11 @@
 
 
 <b>ssh backflip@131.234.26.10   </b>
-pass: backflip2019  
+ 
 
 
 <b>ssh fi@192.168.122.10   </b>
-pass: abc123  
+
 
 
 <br>
@@ -27,7 +27,6 @@ fi@fi:~$ source /opt/stack/devstack/accrc/admin/admin
 
 <br><b>OpenStack Dashboard:  </b>
 http://131.234.26.10   
-    admin/fi  
     <br>
 
 ![VMs Instance from Dashboard](img/instance-from-gui.png)

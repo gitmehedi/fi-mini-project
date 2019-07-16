@@ -1,7 +1,7 @@
 
 
 
-<br><b><H1> Lab Setup: High level Diagram
+<br><b><H1> Lab Setup: High level Diagram </H1>
 
 ![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelVIew.png)
 
@@ -30,7 +30,7 @@ http://131.234.26.10
 
 ![VMs Instance from Dashboard](img/instance-from-gui.png)
 
-<b> <H1> Login to VNFs:
+<b> <H1> Login to VNFs: </H1>
 
 root@fi:~# cd /root  
 root@fi:~# ssh -i key1.pri ubuntu@172.24.4.100
@@ -67,7 +67,7 @@ ip link set dev br0 up
 
 
 <br>
-<b><H1>Issue at this moment: </b>
+<b><H1>Issue at this moment: </H1> </b>
 
 
 1. not able to ping host1 to host2 or vice versa

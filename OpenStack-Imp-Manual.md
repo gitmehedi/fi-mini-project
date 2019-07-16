@@ -3,7 +3,7 @@
 
 <br><b><H1> Lab Setup: High level Diagram </H1>
 
-![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelVIew.png)
+![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelView2.png)
 
 <b>Login to OpenStack Server   </b>
 

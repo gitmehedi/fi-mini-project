@@ -30,7 +30,7 @@ http://131.234.26.10
 
 ![VMs Instance from Dashboard](img/instance-from-gui.png)
 
-<b> <H1> Login to VNFs: </H1>
+<b> <H1> Login to VNFs using Floating IP address: </H1>
 
 root@fi:~# cd /root  
 root@fi:~# ssh -i key1.pri ubuntu@172.24.4.100
@@ -48,7 +48,7 @@ root@fi:~# ssh -i host1.pri ubuntu@172.24.4.209
 <b> <H1> Bridge Details: </H1>
 
 
-![Bridge Setup](img/fi-bridge-setup.png)
+![Bridge Setup](img/bridge-diagram.png)
 
 root@sf1:~# cat bridge.sh  
 #!/bin/bash   
@@ -80,6 +80,4 @@ ip link set dev br0 up
 
 
 
-```python
 
-```

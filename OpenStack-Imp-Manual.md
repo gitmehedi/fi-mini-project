@@ -81,7 +81,7 @@ ip link set dev br0 up
 <br>
 <b>
 <H1>Lessons learned: </H1>
-1. VMs connectivity to Internet or Physical Network   
+1. VMs connectivity to Internet or Physical Network <br>  
 2.    
 
 

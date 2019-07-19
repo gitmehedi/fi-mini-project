@@ -107,9 +107,9 @@ Fig - Network Topogly view from OpenStack GUI
 <br>
 <b>
 <H1>Need to Study Further: </H1>
-1. OpenStack Networking    
-2. Linux Bridge  
-3. Policy/Source base routing   
+1. OpenStack Networking <br>    
+2. Linux Bridge  <br>
+3. Policy/Source base routing <br>   
 
     
 

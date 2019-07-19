@@ -1,7 +1,12 @@
 
 
 
-<br><b><H1>  OpenStack base Lab Setup: High level Diagram </H1>
+<br><b><H1>  OpenStack base Lab Setup </H1>
+
+OS: Ubuntu Linux 18.04 LTS <br>
+OpenStack Release: https://docs.openstack.org/devstack/latest/guides/single-machine.html
+
+
 
 ![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelView2.png)
 

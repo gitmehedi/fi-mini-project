@@ -50,7 +50,7 @@ root@fi:~# ssh -i host2.pri ubuntu@172.24.4.209
 
 
 
-<b> <H2> Integration VNF to OpenStack Cloud: Method 1 </H2> </b>
+<b> <H2> VNF Integration in OpenStack Cloud: Method 1 </H2> </b>
 
 <b> <H3> Bridge Details: </H2>
 
@@ -79,7 +79,7 @@ ip link set dev br0 up
 
 
 <br><br><br><br><br><br>
-<b> <H2>Integration VNF to OpenStack Cloud: Method 2 </H2> </b>
+<b> <H2>VNF Integration in OpenStack Cloud: Method 2 </H2> </b>
 
 
 ![New Togology Map: Simplifided Diagram](img/vnf-new-topology-in-openstack.png)  

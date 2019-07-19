@@ -78,17 +78,20 @@ ip link set dev br0 up
 3. Need to work on bridge setup part as it's not allowing bidirectional connection  
 
 
-
+<br><br><br><br><br><br>
 <b> <H2>Integration VNF to OpenStack Cloud: Method 2 </H2> </b>
 
 
-![New Togology Map: Simplifided Diagram](img/vnf-new-topology-in-openstack.png)
+![New Togology Map: Simplifided Diagram](img/vnf-new-topology-in-openstack.png)  
 
+
+<br>
 
 Fig - Network Topogly view from OpenStack GUI 
 ![New Togology Map](img/vnf-new-togology-in-openstack-netmap.png)
 
 
+<br><br>
 <b><H3>Issue in bridge base setup method: </H3> </b>
 
 

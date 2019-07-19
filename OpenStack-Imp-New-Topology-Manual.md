@@ -1,7 +1,7 @@
 
 
 
-<br><b><H1> OpenStack base Lab Setup: High level Diagram </H1>
+<br><b><H1>  OpenStack base Lab Setup: High level Diagram </H1>
 
 ![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelView2.png)
 
@@ -114,6 +114,14 @@ alias lr2="ip netns exec qrouter-d88ec24f-4bed-4e33-a7f8-9f877c1cdb05"
 root@fi:~# ./router-alias.sh
 
 **
+
+Fig - Router IP information 
+![New Togology Map](img/router-ip-info.png)
+
+<br><br>
+Fig - Routing table 
+![New Togology Map](img/router-fw-table.png)
+
 
 <br><br>
 <b><H3>Issue in Method-2: </H3> </b>

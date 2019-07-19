@@ -103,17 +103,16 @@ Fig - Network Topogly view from OpenStack GUI
 <b>
 <H1>Lessons Learned: </H1>
 1. VMs connectivity to Internet or Physical Network <br>  
-2.    
+   
 
 
 
 <br>
 <b>
 <H1>Need to Study Further: </H1>
-1. OpenStack Networking <br>    
-2. Linux Bridge  <br>
-3. Policy/Source base routing <br>   
-4. Network troubleshooting <br>
+1. OpenStack Networking and it's troubleshooting <br>    
+2. Linux Bridge and it's troubleshooting  <br>
+3. Policy/Source base routing <br>    <br>
 
     
 

@@ -1,16 +1,14 @@
 
 
 
-<br><b><H1> Lab Setup: High level Diagram </H1>
+<br><b><H1> OpenStack base Lab Setup: High level Diagram </H1>
 
 ![Lab Setup: High level Diagram](img/FI-NodeDiagramHighLevelView2.png)
 
-<b>Login to OpenStack Server   </b>
+<b>Login to OpenStack Server -   </b>
 
 
-<b>  1.  ssh backflip@131.234.26.10  </b>   
-
-  
+<b>  1.  ssh backflip@131.234.26.10  </b>     
 <b>  2.  ssh fi@192.168.122.10   </b>
 
 
@@ -18,7 +16,7 @@
 <br>
 
 
-<b>import openstack related information to run command from cli</b>
+<b>Import openstack authentication related information to run command from cli</b>
 
 fi@fi:~$ source /opt/stack/devstack/accrc/admin/admin  
 
@@ -87,12 +85,38 @@ ip link set dev br0 up
 
 <br>
 
-Fig - Network Topogly view from OpenStack GUI 
+Fig - Network Topology view from OpenStack GUI 
 ![New Togology Map](img/vnf-new-togology-in-openstack-netmap.png)
 
 
+
+<br>
+** 
+
+root@fi:~# ip netns list  
+qdhcp-e1732e7c-c4fb-43c7-9f44-f5437ceccf5c (id: 11)  
+qrouter-d88ec24f-4bed-4e33-a7f8-9f877c1cdb05 (id: 10)  
+qrouter-3d4999e9-93fb-4d19-8669-2d39d60868dc (id: 9)  
+qdhcp-51ca4bcf-97d3-4f21-a2dd-007f7fb83469 (id: 8)  
+qrouter-0ba4f245-5f80-4e05-8bec-aa1440dc4bd6 (id: 7)  
+qdhcp-91fe074f-cbdf-4265-b86d-0fb19530431e (id: 6)  
+qdhcp-c7675adf-32b6-4a1c-9802-24cf02008b22 (id: 5)  
+qdhcp-d4b11ff5-8fca-4d16-a582-36f1843a102a (id: 4)     
+qdhcp-bbc27857-4533-4ef6-aac1-8e9bdc13c282 (id: 3)  
+qdhcp-24442999-3eb8-4f5f-b99b-d8e3a0d46e11 (id: 2)  
+qrouter-2a655533-f24d-4437-b0a0-0c30cf1c76fc (id: 1)  
+qrouter-0a8c7ddd-14fb-4882-8962-22af17f382f1 (id: 0)  
+root@fi:~# cat router-alias.sh  
+alias lr1="ip netns exec qrouter-0ba4f245-5f80-4e05-8bec-aa1440dc4bd6"  
+alias fwr="ip netns exec qrouter-3d4999e9-93fb-4d19-8669-2d39d60868dc"  
+alias lr2="ip netns exec qrouter-d88ec24f-4bed-4e33-a7f8-9f877c1cdb05"  
+
+root@fi:~# ./router-alias.sh
+
+**
+
 <br><br>
-<b><H3>Issue in bridge base setup method: </H3> </b>
+<b><H3>Issue in Method-2: </H3> </b>
 
 
 1. from VNF(sf1) we can ping either HOST1 or HOST2   

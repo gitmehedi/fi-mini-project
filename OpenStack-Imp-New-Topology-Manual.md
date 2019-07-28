@@ -35,17 +35,16 @@ http://131.234.26.10
 
 <b> <H1> Login to VNFs using Floating IP address: </H1>
 
+```
 root@fi:~# cd /root  
 root@fi:~# ssh -i key1.pri ubuntu@172.24.4.100
-
 
 root@fi:~# cd /root  
 root@fi:~# ssh -i host1.pri ubuntu@172.24.4.190  
 
-
-
 root@fi:~# cd /root  
 root@fi:~# ssh -i host2.pri ubuntu@172.24.4.209  
+```
 
 <br>
 
@@ -59,18 +58,19 @@ root@fi:~# ssh -i host2.pri ubuntu@172.24.4.209
 
 ![Bridge Setup](img/bridge-diagram.png)
 
+```
 root@sf1:~# cat bridge.sh  
-#!/bin/bash   
+!#/bin/bash   
 brctl addbr br0  
 ifconfig ens6 0.0.0.0 promisc  
 ifconfig ens7 0.0.0.0 promisc  
-#brctl addif br0 ens6  
-#brctl addif br0 ens7  
+brctl addif br0 ens`6  
+brctl addif br0 ens7  
 brctl addif br0 ens6 ens7  
 ip addr add 192.168.210.20/24 dev br0  
 ip addr add 192.168.220.20/24 dev br0  
 ip link set dev br0 up  
-
+```
 <br>
 
 <br>
@@ -96,8 +96,8 @@ Fig - Network Topology view from OpenStack GUI
 
 
 <br>
-** 
 
+```
 root@fi:~# ip netns list  
 qdhcp-e1732e7c-c4fb-43c7-9f44-f5437ceccf5c (id: 11)  
 qrouter-d88ec24f-4bed-4e33-a7f8-9f877c1cdb05 (id: 10)  
@@ -118,7 +118,8 @@ alias lr2="ip netns exec qrouter-d88ec24f-4bed-4e33-a7f8-9f877c1cdb05"
 
 root@fi:~# ./router-alias.sh
 
-**
+```
+
 
 Fig - Router IP information 
 ![New Togology Map](img/router-ip-info.png)
@@ -140,10 +141,28 @@ Fig - Routing table
 <b>
 <H1>Lessons Learned: </H1>
 1. VMs connectivity to Internet or Physical Network <br>  
-   
 
+```
+—missing config in devstack …. need to complete manually  
+sudo ip link set br-ex up  
+sudo ip route add 172.24.4.0/24 dev br-ex  
+sudo ip addr add 172.24.4.1/24 dev br-ex  
+add nat rule for the src address 172.24.4.1/24
 
+permanently:   
 
+vi /etc/netplan/01-netcfg.yaml  
+  ethernets:  
+    br-ex:  
+      dhcp4: no  
+      addresses: [172.24.4.1/24]  
+
+ netplan apply
+
+\#apply src nat for the src address 172.24.4.1/24 and use proper outgoing interface which is connected to internet  
+/sbin/iptables -t nat -A POSTROUTING -o ens160 -j MASQUERADE
+
+```
 <br>
 <b>
 <H1>Need to Study Further: </H1>

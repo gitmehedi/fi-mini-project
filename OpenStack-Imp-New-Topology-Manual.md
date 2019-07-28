@@ -159,7 +159,7 @@ vi /etc/netplan/01-netcfg.yaml
 
  netplan apply
 
-\#apply src nat for the src address 172.24.4.1/24 and use proper outgoing interface which is connected to internet  
+#apply src nat for the src address 172.24.4.1/24 and use proper outgoing interface which is connected to internet  
 /sbin/iptables -t nat -A POSTROUTING -o ens160 -j MASQUERADE
 
 ```
